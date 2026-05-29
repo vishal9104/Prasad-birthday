@@ -3,126 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday 🌸</title>
+  <title>Happy Birthday Prasad 🌸</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Floating petals canvas -->
-  <div class="petals-container" id="petals"></div>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-inner">
-      <span class="tag">✦ a gift from the heart ✦</span>
-      <h1 class="hero-name" id="friend-name">Your Friend's Name</h1>
-      <p class="hero-date" id="hero-date">· · ·</p>
-      <h2 class="hero-wish">Happy Birthday</h2>
-      <p class="hero-sub">Here's to every moment we've shared — and all the ones still ahead</p>
-      <a href="#letter" class="scroll-btn">
-        <span>scroll down</span>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M3 8l4 4 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+  <!-- ── BLAST INTRO OVERLAY ── -->
+  <div id="blast-overlay">
+    <canvas id="blast-canvas"></canvas>
+    <div id="blast-text">
+      <div id="blast-emoji">🎂</div>
+      <h1 id="blast-name">Happy Birthday<br><span>Prasad!</span></h1>
+      <p id="blast-sub">Something special is waiting for you...</p>
     </div>
-  </section>
+  </div>
 
-  <!-- Letter Section -->
-  <section class="section letter-section" id="letter">
-    <div class="container">
-      <p class="section-label">a letter for you</p>
-      <div class="letter-card">
-        <div class="quote-mark">"</div>
-        <div class="letter-body" id="letter-body">
-          <p>You are one of those rare people who make the world feel warmer just by being in it.</p>
-          <p>On this birthday, I want you to know how much your presence means — every laugh we've shared, every silly moment, every time you've been there without me even asking.</p>
-          <p>You have this beautiful way of turning ordinary days into memories worth keeping. And I am so, so glad our paths crossed.</p>
-          <p>Here's to you. All of you. Happy Birthday.</p>
-        </div>
-        <p class="letter-sign" id="letter-sign">— with all my love, <em>Your Name</em></p>
+  <!-- ── MAIN SITE (hidden until blast done) ── -->
+  <div id="main-site" style="display:none;">
+
+    <div class="petals-container" id="petals"></div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="tag">✦ a gift from the heart ✦</span>
+        <h1 class="hero-name" id="friend-name">Prasad More</h1>
+        <p class="hero-date" id="hero-date">30 May</p>
+        <h2 class="hero-wish">Happy Birthday</h2>
+        <p class="hero-sub">Here's to every moment we've shared — and all the ones still ahead</p>
+        <a href="#school" class="scroll-btn">
+          scroll down
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M3 8l4 4 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Memories Section -->
-  <section class="section memories-section" id="memories">
-    <div class="container">
-      <p class="section-label">moments we'll never forget</p>
-      <div class="memories-grid" id="memories-grid">
-
-        <div class="memory-card reveal">
-          <div class="memory-photo" style="background-image: url('images/memory1.jpg')">
-            <div class="memory-overlay"></div>
-          </div>
-          <div class="memory-body">
-            <span class="memory-date">Summer, 2022</span>
-            <p class="memory-caption">That trip we said we'd never forget — and never did.</p>
-          </div>
+    <!-- School Friends Photo -->
+    <section class="school-section" id="school">
+      <div class="school-photo-wrap reveal">
+        <img src="images/school-friends.jpg" alt="School days" class="school-photo" />
+        <div class="school-caption">
+          <span class="school-label">✦ where it all began ✦</span>
+          <p> That classroom. These people. This friendship.</p>
         </div>
-
-        <div class="memory-card reveal">
-          <div class="memory-photo" style="background-image: url('images/memory2.jpg')">
-            <div class="memory-overlay"></div>
-          </div>
-          <div class="memory-body">
-            <span class="memory-date">A random Tuesday</span>
-            <p class="memory-caption">The time we laughed so hard we couldn't breathe.</p>
-          </div>
-        </div>
-
-        <div class="memory-card reveal">
-          <div class="memory-photo" style="background-image: url('images/memory3.jpg')">
-            <div class="memory-overlay"></div>
-          </div>
-          <div class="memory-body">
-            <span class="memory-date">New Year's Eve</span>
-            <p class="memory-caption">Counting down together — no one else I'd rather start a year with.</p>
-          </div>
-        </div>
-
-        <div class="memory-card reveal">
-          <div class="memory-photo" style="background-image: url('images/memory4.jpg')">
-            <div class="memory-overlay"></div>
-          </div>
-          <div class="memory-body">
-            <span class="memory-date">Just last month</span>
-            <p class="memory-caption">Proof that the best moments are never planned.</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Words Section -->
-  <section class="section words-section" id="words">
-    <div class="container">
-      <p class="section-label">things I love about you</p>
-      <div class="words-grid" id="words-grid">
-        <div class="word-card reveal"><span class="word-num">01</span><p>Your laugh is contagious and completely uncontrollable</p></div>
-        <div class="word-card reveal"><span class="word-num">02</span><p>You always know what to say — and when to say nothing</p></div>
-        <div class="word-card reveal"><span class="word-num">03</span><p>Your kindness is never an act, it's just who you are</p></div>
-        <div class="word-card reveal"><span class="word-num">04</span><p>You make ordinary moments feel like something worth remembering</p></div>
-        <div class="word-card reveal"><span class="word-num">05</span><p>The way you show up for the people you love</p></div>
-        <div class="word-card reveal"><span class="word-num">06</span><p>You've never once made me feel small for being myself</p></div>
+    <!-- Letter -->
+    <section class="section letter-section" id="letter">
+      <div class="container">
+        <p class="section-label">a letter for you</p>
+        <div class="letter-card">
+          <div class="quote-mark">"</div>
+          <div class="letter-body" id="letter-body"></div>
+          <p class="letter-sign" id="letter-sign">— yours, always ♡</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Closing Section -->
-  <section class="closing-section">
-    <div class="closing-inner">
-      <div class="candle-row">
-        <span class="candle">🕯</span>
-        <span class="candle">🕯</span>
-        <span class="candle">🕯</span>
+    <!-- Memories - photos only -->
+    <section class="section memories-section" id="memories">
+      <div class="container">
+        <p class="section-label">moments we'll never forget</p>
+        <div class="memories-grid" id="memories-grid"></div>
       </div>
-      <h2 class="closing-title">Make a Wish</h2>
-      <p class="closing-sub">Wishing you a year filled with everything your heart deserves.</p>
-      <div class="closing-divider">✦ &nbsp; ✦ &nbsp; ✦</div>
-      <p class="closing-from" id="closing-from">With love, always ♡</p>
-    </div>
-  </section>
+    </section>
+
+    <!-- Things I love -->
+    <section class="section words-section" id="words">
+      <div class="container">
+        <p class="section-label">things that make you, you</p>
+        <div class="words-grid" id="words-grid"></div>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="closing-section">
+      <div class="closing-inner">
+        <div class="candle-row">🕯 🎂 🕯</div>
+        <h2 class="closing-title">Make a Wish</h2>
+        <p class="closing-sub">Wishing you a year filled with everything your heart deserves.</p>
+        <div class="closing-divider">✦ &nbsp; ✦ &nbsp; ✦</div>
+        <p class="closing-from" id="closing-from">From std 8th to forever 🌸</p>
+      </div>
+    </section>
+
+  </div><!-- end main-site -->
 
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>
